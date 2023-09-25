@@ -1,0 +1,31 @@
+#sidebar-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:80vw;
+    position: fixed;
+    top:.4vh;
+    left:20vw;
+    background-color: transparent;
+}
+.sidebar-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    width: 10vw;
+    background-color: transparent;
+}
+.sidebar-btn .h1{
+    font-size: 1.2vw;
+    color: white;
+    font-weight: 540;
+}
+.link{
+    text-decoration: none;
+}
+.active .h1{
+    color: rgb(185, 184, 184);
+}
