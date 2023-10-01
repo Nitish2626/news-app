@@ -1,12 +1,29 @@
 #nav-bar {
-    width: 99vw;
+    width: 100vw;
     height: 7vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     position: sticky;
     top: 0;
-    background-color: rgb(30, 133, 173);
+    background-color:cornflowerblue;
+}
+#logo{
+    width:4vw;
+    height:6vh;
+    border-radius: 5px;
+    margin :0 0 0 2vw;
+}
+#country-btn{
+    border: none;
+    outline: none;
+    width: 3vw;
+    height:2.5vw;
+    margin-left:30vw;
+    cursor: pointer;
+    background-color: transparent;
+}
+#country-btn svg{
+    fill:white;
 }
 #hamburger-icon {
     display: none;
@@ -28,4 +45,8 @@
     margin: 6% 0%;
     border-radius: 10px;
     transition: 0.2s;
+}
+
+@media only screen and (min-width:250px){
+
 }

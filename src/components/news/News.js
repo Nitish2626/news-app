@@ -9,30 +9,32 @@ const News = (props) => {
     const [articles, setArticles] = useState([]);
     const [loader, setLoader] = useState(false);
 
-    document.title=props.category;
+    let title = props.category.slice(1);
+    document.title = props.category[0].toUpperCase() + title;
 
-    const api = async () => {
-        try {
-            props.progress(0);
-            const res = await axios.get(`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288`)
-            props.progress(50)
-            const data =await res.data.articles;
-            props.progress(70)
-            setArticles(await data);
-            props.progress(100);
-        }
-        catch (err) {
-            console.log(err);
-        }
-    };
-    useEffect(()=>{
+    useEffect(() => {
+
+        const api = async () => {
+            try {
+                props.progress(10);
+                const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288`)
+                props.progress(50)
+                const data = await res.data.articles;
+                props.progress(70)
+                setArticles(await data);
+                props.progress(100);
+            }
+            catch (err) {
+                console.log(err);
+            }
+        };
         api();
-    },[]);
+    }, [props.search,props.country]);
 
     return (
         <div id="news-div">
-            {loader ? <Loader /> : articles.map((item) => {
-                return <NewsItem title={item.title} image={item.urlToImage} description={item.description} url={item.url} source={item.source.name} author={item.author} time={item.publishedAt} />
+            {articles.map((item, i) => {
+                return <NewsItem key={i} title={item.title} image={item.urlToImage} description={item.description} url={item.url} source={item.source.name} author={item.author} time={item.publishedAt} />
             })}
         </div>
     );

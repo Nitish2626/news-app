@@ -3,10 +3,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width:80vw;
+    width:58vw;
     position: fixed;
     top:.4vh;
-    left:20vw;
+    left:40vw;
     background-color: transparent;
 }
 .sidebar-btn{
@@ -15,8 +15,9 @@
     justify-content: center;
     border: none;
     outline: none;
-    width: 10vw;
+    width: 8vw;
     background-color: transparent;
+    cursor: pointer;
 }
 .sidebar-btn .h1{
     font-size: 1.2vw;
@@ -27,5 +28,10 @@
     text-decoration: none;
 }
 .active .h1{
-    color: rgb(185, 184, 184);
+    color:rgb(30, 133, 173);;
+}
+.active{
+    border-radius: 10px;
+    background-color: white;
+    transition: all 0.3s linear;
 }

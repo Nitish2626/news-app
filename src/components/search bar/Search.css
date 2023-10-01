@@ -1,0 +1,22 @@
+#search-box{
+    border:2px solid white;
+    position: fixed;
+    left: 9vw;
+    top:1vh;
+}
+#search{
+    width:20vw;
+    border:none;
+    outline:none;
+    font-size: 17px;
+    padding: 1vh 0.5vw;
+}
+#cancel-btn{
+    width:3.8vw;
+    height:4vh;
+    border: none;
+    outline: none;
+    background-color:transparent;
+    color:white;
+    cursor: pointer;
+}

@@ -1,8 +1,8 @@
 #news-div{
-    width:98vw;
+    width:100vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap:2vw;
-    padding:2vh 0 2vh 0.8vw;
+    gap:3vw;
+    padding:1vh 0 1vh 0vw;
 }

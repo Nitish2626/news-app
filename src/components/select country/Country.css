@@ -1,0 +1,53 @@
+#country-div {
+    width: 100vw;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image:linear-gradient(to bottom,);
+}
+
+#country-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0vh 1vw 2vh 1vw;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    margin: -10vh 0 0 0;
+}
+
+#country-con h2 {
+    color: white;
+}
+
+#country-con select {
+    width: 18vw;
+    border-radius: 10px;
+    padding: 0.5vh 0;
+    font-size: 17px;
+    text-align: center;
+}
+
+#country-con button {
+    width: 7vw;
+    height: 4vh;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: white;
+    color: cornflowerblue;
+    margin: 2vh 0 0 0;
+    box-shadow: 1px 1px 10px 0 black;
+}
+
+#country-con button:hover {
+    color: white;
+    background-color: cornflowerblue;
+}
+
+#country-text {
+    color: rgb(141, 33, 33);
+}

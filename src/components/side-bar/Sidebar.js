@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
 
 const Sidebar = (props) => {
@@ -13,37 +13,37 @@ const Sidebar = (props) => {
             </NavLink>
 
             <NavLink to="/health" className="link">
-                <button className="sidebar-btn" onClick={()=>props.click(true)}>
+                <button className="sidebar-btn">
                     <h1 className="h1">Health</h1>
                 </button>
             </NavLink>
 
             <NavLink to="/science" className="link">
-                <button className="sidebar-btn" onClick={()=>props.click(true)}>
-                    <h1 className="h1">science</h1>
+                <button className="sidebar-btn">
+                    <h1 className="h1">Science</h1>
                 </button>
             </NavLink>
 
             <NavLink to="/technology" className="link">
-                <button className="sidebar-btn" onClick={()=>props.click(true)}>
+                <button className="sidebar-btn">
                     <h1 className="h1">Technology</h1>
                 </button>
             </NavLink>
 
             <NavLink to="/business" className="link">
-                <button className="sidebar-btn" onClick={()=>props.click(true)}>
+                <button className="sidebar-btn">
                     <h1 className="h1">Business</h1>
                 </button>
             </NavLink>
 
             <NavLink to="/entertainment" className="link">
-                <button className="sidebar-btn" onClick={()=>props.click(true)}>
+                <button className="sidebar-btn">
                     <h1 className="h1">Entertainment</h1>
                 </button>
             </NavLink>
 
             <NavLink to="/sports" className="link">
-                <button className="sidebar-btn" onClick={()=>props.click(true)}>
+                <button className="sidebar-btn">
                     <h1 className="h1">Sports</h1>
                 </button>
             </NavLink>
