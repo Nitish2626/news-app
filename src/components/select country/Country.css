@@ -4,7 +4,7 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    background-image:linear-gradient(to bottom,);
+    background-color:black;
 }
 
 #country-con {
@@ -15,7 +15,7 @@
     padding: 0vh 1vw 2vh 1vw;
     border-radius: 10px;
     background-color: cornflowerblue;
-    margin: -10vh 0 0 0;
+    margin: -15vh 0 0 0;
 }
 
 #country-con h2 {
@@ -23,22 +23,22 @@
 }
 
 #country-con select {
-    width: 18vw;
+    width: fit-content;
     border-radius: 10px;
-    padding: 0.5vh 0;
+    padding: 0.8vh 0;
     font-size: 17px;
     text-align: center;
 }
 
 #country-con button {
-    width: 7vw;
-    height: 4vh;
+    width:fit-content;
     font-size: 20px;
     border: none;
     outline: none;
     border-radius: 5px;
     background-color: white;
     color: cornflowerblue;
+    padding:1vh 3vw;
     margin: 2vh 0 0 0;
     box-shadow: 1px 1px 10px 0 black;
 }
@@ -49,5 +49,5 @@
 }
 
 #country-text {
-    color: rgb(141, 33, 33);
+    color: rgb(159, 3, 13);
 }

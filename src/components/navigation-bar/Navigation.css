@@ -1,6 +1,6 @@
 #nav-bar {
     width: 100vw;
-    height: 7vh;
+    height: fit-content;
     display: flex;
     align-items: center;
     position: sticky;
@@ -18,7 +18,7 @@
     outline: none;
     width: 3vw;
     height:2.5vw;
-    margin-left:30vw;
+    margin-left:32vw;
     cursor: pointer;
     background-color: transparent;
 }
@@ -45,8 +45,4 @@
     margin: 6% 0%;
     border-radius: 10px;
     transition: 0.2s;
-}
-
-@media only screen and (min-width:250px){
-
 }

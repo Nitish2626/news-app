@@ -7,8 +7,8 @@ const Sidebar = (props) => {
         <div id="sidebar-div">
 
             <NavLink to="/" className="link">
-                <button className="sidebar-btn" onClick={()=>props.click(true)}>
-                    <h1 className="h1">All</h1>
+                <button className="sidebar-btn">
+                    <h1 className="h1">General</h1>
                 </button>
             </NavLink>
 

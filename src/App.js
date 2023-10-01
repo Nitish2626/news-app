@@ -11,9 +11,10 @@ import Country from './components/select country/Country';
 function App() {
 
   const [progress, setProgress] = useState();
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState("");
   const [showCountry, setShowCountry] = useState(true);
-  const [countryCode,setCountryCode]=useState();
+  const [countryCode,setCountryCode]=useState("");
+  const [selectedCountry,setSelectedCountry]=useState("");
 
   const handleProgress = (prog) => {
     setProgress(prog);
@@ -31,12 +32,16 @@ function App() {
     setCountryCode(c);
   }
 
+  const selectCountry=(c)=>{
+    setSelectedCountry(c);
+  }
+
   return (
     <>
-      {showCountry ? <Country hide={hideCountry} code={setCode} /> :
+      {showCountry ? <Country hide={hideCountry} code={setCode} country={selectCountry} /> :
         <Router>
           <Navigation show={hideCountry} />
-          <Search search={handleSearch} value={search} />
+          <Search search={handleSearch} value={search} selected={selectedCountry} />
           <Sidebar />
           <LoadingBar color='white' progress={progress} />
           <Routes>

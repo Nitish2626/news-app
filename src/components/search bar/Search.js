@@ -11,9 +11,10 @@ const Search = (props) => {
         props.search("");
     }
 
+
     return (
         <section id="search-box">
-            <input type="text" id="search" placeholder="Search" onChange={changeSearch} value={props.value}></input>
+            <input type="text" id="search" placeholder={`Search for ${props.selected} news`} onChange={changeSearch} value={props.value}></input>
             <button id="cancel-btn" onClick={clear}>
                 <i class="fa-solid fa-xmark"></i>
             </button>

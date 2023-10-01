@@ -9,7 +9,7 @@ const Country = (props) => {
     const countriesCode = ["", "ae", "ar", "at", "au", "be", "bg", "br", "ca", "ch", "cn", "co", "cu", "cz", "de", "eg", "fr", "gb", "gr", "hk", "hu", "id", "ie", "il", "in", "it", "jp", "kr", "lt", "lv", "ma", "mx", "my", "ng", "nl", "no", "nz", "ph", "pl", "pt", "ro", "ru", "sa", "se", "sg", "si", "sk", "th", "tr", "tw", "ua", "us", "ve", "za"
     ];
 
-    const [choose, setChoose] = useState();
+    const [choose, setChoose] = useState("");
     const [valid, setValid] = useState(true);
     let value;
     let code;
@@ -18,10 +18,12 @@ const Country = (props) => {
         if (e.target.value == "---------- Select ----------") {
             setValid(true);
             setChoose("");
+            props.country("");
         }
         else {
             setChoose(e.target.value);
             setValid(false);
+            props.country(e.target.value.slice(0,-6));
         }
 
     }
@@ -52,7 +54,7 @@ const Country = (props) => {
                         return <option key={index}>{item}</option>
                     })}
                 </select>
-                {valid && <p id="country-text">* Please Select a Valid Country</p>}
+                {valid && <h4 id="country-text">* Please Select a Valid Country</h4>}
                 <button onClick={hide}>Done</button>
             </div>
         </div>
