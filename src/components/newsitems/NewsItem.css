@@ -38,5 +38,37 @@
 #url:hover{
     color:rgb(30, 133, 173);
     background-color: white;
-    box-shadow: 1px 1px 10px 0px black;
+    box-shadow: 2px 2px 10px 0px black;
+}
+
+@media only screen and (min-width:250px){
+    #news-item{
+        width:95vw;
+        box-shadow: 1px 1px 10px 0px black;
+    }
+    #news-item:hover{
+        box-shadow: none;
+    }
+    #img{
+        width:95vw;
+        height:30vh;
+    }
+    #url{
+        font-size: 6vw;
+        padding:1.2vh 5vw;
+    }
+}
+
+@media only screen and (min-width:350px){
+    #url{
+        font-size: 5vw;
+        padding:1.2vh 5vw;
+    }
+}
+
+@media only screen and (min-width:390px){
+    #url{
+        font-size: 4.5vw;
+        padding:1.2vh 5vw;
+    }
 }

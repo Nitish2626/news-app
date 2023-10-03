@@ -15,6 +15,7 @@ function App() {
   const [showCountry, setShowCountry] = useState(true);
   const [countryCode,setCountryCode]=useState("");
   const [selectedCountry,setSelectedCountry]=useState("");
+  const [showSidebar,setShowSidebar]=useState(false);
 
   const handleProgress = (prog) => {
     setProgress(prog);
@@ -36,13 +37,17 @@ function App() {
     setSelectedCountry(c);
   }
 
+  const sidebar=(s)=>{
+    setShowSidebar(s);
+  }
+
   return (
     <>
       {showCountry ? <Country hide={hideCountry} code={setCode} country={selectCountry} /> :
         <Router>
-          <Navigation show={hideCountry} />
+          <Navigation show={hideCountry} click={showSidebar} func={sidebar} />
           <Search search={handleSearch} value={search} selected={selectedCountry} />
-          <Sidebar />
+          {showSidebar && <Sidebar />}
           <LoadingBar color='white' progress={progress} />
           <Routes>
 

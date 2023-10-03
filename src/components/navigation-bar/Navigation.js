@@ -3,8 +3,8 @@ import "./Navigation.css";
 const Navigation = (props) => {
 
     const showHide = () => {
-        if (props.value == false) {
-            props.show(true);
+        if (props.click == false) {
+            props.func(true);
             document.getElementById("line1").style.rotate = "50deg";
             document.getElementById("line1").style.marginTop = "30%";
             document.getElementById("line2").style.opacity = 0;
@@ -12,7 +12,7 @@ const Navigation = (props) => {
             document.getElementById("line3").style.marginTop = "-30%";
         }
         else {
-            props.show(false);
+            props.func(false);
             document.getElementById("line1").style.rotate = "0deg";
             document.getElementById("line1").style.marginTop = "6%";
             document.getElementById("line2").style.opacity = 1;

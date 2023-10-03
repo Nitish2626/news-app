@@ -37,3 +37,57 @@
     background-color: white;
     transition: all 0.3s linear;
 }
+
+@media only screen and (min-width:250px){
+    #sidebar-div{
+        display:flex;
+        flex-direction: column;
+        top:12vh;
+        left:30vw;
+        background-color:cornflowerblue;
+        width:70vw;
+        padding:1vh 0;
+        border-radius: 10px;
+    }
+    .sidebar-btn{
+        width:50vw;
+    }
+    .sidebar-btn .h1{
+        font-size: 7vw;
+    }
+}
+
+@media only screen and (min-width:270px){
+    #sidebar-div{
+        width:60vw;
+        left:40vw;
+    }
+    .sidebar-btn{
+        width:45vw;
+    }
+    .sidebar-btn .h1{
+        font-size: 5.8vw;
+    }
+}
+
+@media only screen and (min-width:375px){
+    .sidebar-btn{
+        width:40vw;
+    }
+    .sidebar-btn .h1{
+        font-size: 5.2vw;
+    }
+}
+
+@media only screen and (min-width:411px){
+    #sidebar-div{
+        width:52vw;
+        left:48vw;
+    }
+    .sidebar-btn{
+        width:30vw;
+    }
+    .sidebar-btn .h1{
+        font-size: 4.7vw;
+    }
+}
