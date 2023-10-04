@@ -60,6 +60,12 @@
 }
 
 @media only screen and (min-width:350px){
+    #news-item{
+        width:87vw;
+    }
+    #img{
+        width:87vw;
+    }
     #url{
         font-size: 5vw;
         padding:1.2vh 5vw;
@@ -67,8 +73,105 @@
 }
 
 @media only screen and (min-width:390px){
+    #news-item{
+        width:75vw;
+    }
+    #img{
+        width:75vw;
+    }
     #url{
         font-size: 4.5vw;
         padding:1.2vh 5vw;
+    }
+}
+
+@media only screen and (min-width:451px){
+    #news-item{
+        width:70vw;
+    }
+    #img{
+        width:70vw;
+    }
+    #url{
+        font-size: 4vw;
+        padding:1.2vh 5vw;
+    }
+}
+
+@media only screen and (min-width:530px){
+    #news-item{
+        width:45.5vw;
+    }
+    #img{
+        width:45.5vw;
+    }
+    #url{
+        font-size: 3vw;
+        padding:1.2vh 5vw;
+    }
+}
+
+@media only screen and (min-width:700px){
+    #news-item{
+        width:44vw;
+    }
+    #img{
+        width:44vw;
+    }
+    #url{
+        font-size: 2.5vw;
+        padding:1.2vh 3vw;
+    }
+}
+
+@media only screen and (min-width:800px){
+    #news-item{
+        width:37vw;
+    }
+    #img{
+        width:37vw;
+    }
+    #url{
+        font-size: 2vw;
+        padding:1.2vh 2vw;
+    }
+}
+
+@media only screen and (min-width:900px){
+    #news-item{
+        width:28vw;
+    }
+    #img{
+        width:27vw;
+    }
+    #url{
+        font-size: 1.5vw;
+        padding:1.2vh 2vw;
+    }
+}
+
+@media only screen and (min-width:1200px){
+    #news-item{
+        width:26vw;
+    }
+    #img{
+        width:26vw;
+    }
+    #url{
+        font-size: 1.5vw;
+        padding:1.2vh 2vw;
+    }
+}
+
+@media only screen and (min-width:1300px){
+    #news-item{
+        width:20.5vw;
+    }
+    #img{
+        width:20.5vw;
+    }
+    #url{
+        font-size: 1.3vw;
+        padding:1.2vh 1.5vw;
     }
 }

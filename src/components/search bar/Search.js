@@ -16,7 +16,7 @@ const Search = (props) => {
         <section id="search-box">
             <input type="text" id="search" placeholder={`Search for ${props.selected} news`} onChange={changeSearch} value={props.value}></input>
             <button id="cancel-btn" onClick={clear}>
-                <i class="fa-solid fa-xmark"></i>
+                <i className="fa-solid fa-xmark"></i>
             </button>
         </section>
     );
