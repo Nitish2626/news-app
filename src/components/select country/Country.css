@@ -1,53 +1,137 @@
-#country-div {
-    width: 100vw;
-    height:100vh;
+#country-div{
+    width:100vw;
+    height: 100vh;
     display:flex;
-    align-items: center;
     justify-content: center;
-    background-color:black;
+    align-items: center;
+    background-color: black;
 }
 
-#country-con {
+#country-con{
+    width:90vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0vh 1vw 2vh 1vw;
+    height: fit-content;
     border-radius: 10px;
     background-color: cornflowerblue;
-    margin: -15vh 0 0 0;
+    padding:0 1vw 2vh 1vw;
+    margin:-5vh 0 0 0;
 }
 
-#country-con h2 {
+#country-con h2{
+   font-size: 8vw;
     color: white;
 }
 
-#country-con select {
-    width: fit-content;
+#country-con select{
+    width:78vw;
     border-radius: 10px;
-    padding: 0.8vh 0;
-    font-size: 17px;
+    padding: 0.7vh 0;
     text-align: center;
+    font-size: 5.7vw;
 }
 
-#country-con button {
-    width:fit-content;
-    font-size: 20px;
+#country-text{
+    color:rgb(159, 0, 0);
+    text-align: center;
+    font-size: 5vw;
+}
+
+#country-con button{
+    margin:2vh 0;
+    border-radius: 10px;
+    width:40vw;
+    background-color: white;
+    color:cornflowerblue;
     border: none;
     outline: none;
-    border-radius: 5px;
-    background-color: white;
-    color: cornflowerblue;
-    padding:1vh 3vw;
-    margin: 2vh 0 0 0;
-    box-shadow: 1px 1px 10px 0 black;
+    padding:1vh 0;
+    font-size: 7vw;
+    box-shadow: 2px 2px 10px 0px black;
 }
 
-#country-con button:hover {
-    color: white;
+#country-con button:hover{
     background-color: cornflowerblue;
+    color:white;
 }
 
-#country-text {
-    color: rgb(159, 3, 13);
+@media only screen and (min-width:320px){
+    #country-con{
+        width:85vw;
+    }
+}
+
+@media only screen and (min-width:360px){
+    #country-con{
+        width:80vw;
+    }
+    #country-con h2{
+        font-size: 7vw;
+    }
+    #country-con select{
+        width:73vw;
+        font-size: 5.2vw;
+    }
+    #country-con button{
+        width:35vw;
+        font-size: 6vw;
+    }
+}
+
+@media only screen and (min-width:380px){
+    #country-con{
+        width:72vw;
+    }
+    #country-con h2{
+        font-size: 6vw;
+    }
+    #country-con select{
+        width:60vw;
+        font-size: 5vw;
+    }
+    #country-text{
+        font-size: 4vw;
+    }
+    #country-con button{
+        width:30vw;
+        font-size: 5vw;
+    }
+}
+
+@media only screen and (min-width:450px){
+    #country-con{
+        width:65vw;
+    }
+    #country-con h2{
+        font-size: 5vw;
+    }
+    #country-con select{
+        width:55vw;
+        font-size: 4vw;
+    }
+    #country-text{
+        font-size: 3.5vw;
+    }
+    #country-con button{
+        width:25vw;
+        font-size: 4vw;
+    }
+}
+
+@media only screen and (min-width:500px){
+    #country-con{
+        width:55vw;
+    }
+    #country-con h2{
+        font-size: 4.5vw;
+    }
+    #country-con select{
+        width:45vw;
+        font-size: 3.5vw;
+    }
+    #country-text{
+        font-size: 3vw;
+    }
 }
