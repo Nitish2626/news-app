@@ -1,1 +1,8 @@
-
+#news-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:4vh;
+    padding:8vh 0 3vh 0;
+}

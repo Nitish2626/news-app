@@ -1,0 +1,32 @@
+#search-box{
+    width:100vw;
+    height:6vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color:transparent;
+    box-shadow: 2px 2px 10px 0 black;
+}
+#search{
+    width:85vw;
+    height:4vh;
+    padding:1vh 2vw;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 6vw;
+    border: none;
+    outline: none;
+}
+#cancel-btn{
+    width:11vw;
+    height:6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+    border: none;
+    outline: none;
+}
+.fa-solid{
+    color: white;
+}

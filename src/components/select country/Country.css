@@ -135,3 +135,163 @@
         font-size: 3vw;
     }
 }
+
+@media only screen and (min-width:600px){
+    #country-con{
+        width:45vw;
+    }
+    #country-con h2{
+        font-size: 4vw;
+    }
+    #country-con select{
+        width:40vw;
+        font-size: 3vw;
+    }
+    #country-text{
+        font-size: 2.5vw;
+    }
+    #country-con button{
+        width:20vw;
+        font-size: 3.5vw;
+    }
+}
+
+@media only screen and (min-width:700px){
+    #country-con{
+        width:40vw;
+    }
+    #country-con h2{
+        font-size: 3.5vw;
+    }
+    #country-con select{
+        width:35vw;
+        font-size: 2.5vw;
+    }
+    #country-text{
+        font-size: 2.3vw;
+    }
+    #country-con button{
+        width:17vw;
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (min-width:800px){
+    #country-con{
+        width:35vw;
+    }
+    #country-con h2{
+        font-size: 3vw;
+    }
+    #country-con select{
+        width:30vw;
+        font-size: 2vw;
+    }
+    #country-text{
+        font-size: 2vw;
+    }
+    #country-con button{
+        width:15vw;
+        font-size: 2.5vw;
+    }
+}
+
+@media only screen and (min-width:900px){
+    #country-con{
+        width:30vw;
+    }
+    #country-con h2{
+        font-size: 2.5vw;
+    }
+    #country-con select{
+        width:25vw;
+        font-size: 1.8vw;
+    }
+    #country-text{
+        font-size: 1.8vw;
+    }
+    #country-con button{
+        width:13vw;
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (min-width:1000px){
+    #country-con{
+        width:28vw;
+    }
+    #country-con h2{
+        font-size: 2.2vw;
+    }
+    #country-con select{
+        width:23vw;
+        font-size: 1.5vw;
+    }
+    #country-text{
+        font-size: 1.5vw;
+    }
+    #country-con button{
+        width:12vw;
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (min-width:1150px){
+    #country-con{
+        width:25vw;
+    }
+    #country-con h2{
+        font-size: 2vw;
+    }
+    #country-con select{
+        width:20vw;
+        font-size: 1.5vw;
+    }
+    #country-text{
+        font-size: 1.4vw;
+    }
+    #country-con button{
+        width:10vw;
+        font-size: 1.5vw;
+    }
+}
+
+@media only screen and (min-width:1300px){
+    #country-con{
+        width:20vw;
+    }
+    #country-con h2{
+        font-size: 1.7vw;
+    }
+    #country-con select{
+        width:18vw;
+        font-size: 1.2vw;
+    }
+    #country-text{
+        font-size: 1.2vw;
+    }
+    #country-con button{
+        width:10vw;
+        font-size: 1.3vw;
+    }
+}
+
+@media only screen and (min-width:1450px){
+    #country-con{
+        width:17vw;
+    }
+    #country-con h2{
+        font-size: 1.5vw;
+    }
+    #country-con select{
+        width:16vw;
+        font-size: 1vw;
+    }
+    #country-text{
+        font-size: 1vw;
+    }
+    #country-con button{
+        width:8vw;
+        font-size: 1.2vw;
+    }
+}
