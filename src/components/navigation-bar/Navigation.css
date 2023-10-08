@@ -48,3 +48,86 @@
     border-radius: 10px;
     transition: 0.2s;
 }
+
+@media only screen and (min-width:300px){
+    #country-btn{
+        width:13vw;
+    }
+}
+
+@media only screen and (min-width:370px){
+    #logo{
+        width:12vw;
+    }
+    #country-btn{
+        width:11vw;
+    }
+}
+
+@media only screen and (min-width:420px){
+    #country-btn{
+        width:10vw;
+    }
+}
+
+@media only screen and (min-width:480px){
+    #logo{
+        width:10vw;
+    }
+    #country-btn{
+        width:9vw;
+    }
+}
+
+@media only screen and (min-width:530px){
+    #logo{
+        width:8vw;
+    }
+    #country-btn{
+        width:8vw;
+    }
+}
+
+@media only screen and (min-width:600px){
+    #country-btn{
+        width:7vw;
+    }
+}
+
+@media only screen and (min-width:700px){
+    #logo{
+        width:6vw;
+    }
+    #country-btn{
+        width:6vw;
+    }
+}
+
+@media only screen and (min-width:800px){
+    #logo{
+        width:5vw;
+        height:5vh;
+        margin-left:2vw;
+    }
+    #hamburger-icon {
+        display: none;
+    }
+    #country-btn{
+        width:5vw;
+    }
+}
+
+@media only screen and (min-width:900px){
+    #country-btn{
+        width:4vw;
+    }
+}
+
+@media only screen and (min-width:1100px){
+    #logo{
+        width:4vw;
+    }
+    #country-btn{
+        width:3.5vw;
+    }
+}

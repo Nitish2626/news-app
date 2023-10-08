@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./NewsItem.css";
 
 const NewsItem = (props) => {
@@ -20,7 +21,7 @@ const NewsItem = (props) => {
             <h3>{props.title}</h3>
             <img src={props.image} id="img"></img>
             <p>{props.description}</p>
-            <a href={props.url} id="url" target="blank">Read More</a>
+            <Link to={props.url} id="url" target="blank">Read More</Link>
         </div>
     );
 }
