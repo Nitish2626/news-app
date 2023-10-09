@@ -16,9 +16,9 @@ const News = (props) => {
 
     const moreArticles=async ()=>{
         try {
-            setLoader(true);
-            const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${page+1}&pageSize=10`);
             setPage(page+1);
+            setLoader(true);
+            const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${page}&pageSize=20`);
             const data = await res.data.articles;
             setTotalResult(await res.data.totalResults); 
             console.log("more",totalResult);
@@ -52,7 +52,7 @@ const News = (props) => {
             }
         };
         api();
-    }, [props.search,props.country,articles.length]);
+    }, [props.search,props.country,totalResult]);
 
     return (
         <div id="news-div">
