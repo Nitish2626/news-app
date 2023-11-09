@@ -1,4 +1,3 @@
-import './App.css';
 import News from './components/news/News';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from "./components/navigation-bar/Navigation";

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import "./NewsItem.css";
 
 const NewsItem = (props) => {
 
@@ -8,9 +7,12 @@ const NewsItem = (props) => {
 
 
     return (
-        <div id="news-item">
-            <h2 id="h2">{props.source}</h2>
-            <div id="div">
+        <div className="w-11/12 h-fit rounded-xl shadow-[2px_2px_10px_0_black] px-2 pb-6 pt-1 hover:shadow-none">
+
+            <h2 className="text-center text-purple-900 text-ellipsis text-xl font-semibold my-2">{props.source}</h2>
+
+            <div className="flex justify-between text-gray-500">
+
                 <span>
                     {props.author}
                 </span>
@@ -18,10 +20,14 @@ const NewsItem = (props) => {
                     {t}
                 </span>
             </div>
-            <h3>{props.title}</h3>
-            <img src={props.image} id="img"></img>
-            <p>{props.description}</p>
-            <Link to={props.url} id="url" target="blank">Read More</Link>
+
+            <h3 className="text-lg font-semibold my-2">{props.title}</h3>
+
+            <img src={props.image} className="11/12 h-40"></img>
+
+            <p className="mb-4">{props.description}</p>
+
+            <Link to={props.url} id="url" target="blank" className="bg-blue-600 text-white text-lg py-1.5 px-3 rounded-md text-center cursor-pointer shadow-[1px_1px_10px_0_grey] hover:bg-white hover:text-blue-500">Read More</Link>
         </div>
     );
 }

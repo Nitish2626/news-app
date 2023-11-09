@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./Country.css";
 
 const Country = (props) => {
 
@@ -46,16 +45,22 @@ const Country = (props) => {
     }
 
     return (
-        <div id="country-div">
-            <div id="country-con">
-                <h2>Select Your Country ?</h2>
-                <select onChange={select}>
+        <div className="w-full h-screen flex items-center justify-center bg-[url('/src/images/earth.png')] bg-contain bg-no-repeat bg-center min-w-max min-h-screen">
+
+            <div className="w-68 h-52 flex flex-col items-center justify-center rounded-lg px-2 py-4 shadow-[1px_1px_10px_0px_white] sm:w-80 sm:h-56 sm:py-0 md:w-96 md:h-60">
+
+                <h2 className="text-2xl text-white mb-4">Select Your Country ?</h2>
+
+                <select className="w-60 rounded-xl py-1 px-2 text-lg bg-transparent text-white outline-white outline-1" onChange={select}>
                     {countries.map((item, index) => {
-                        return <option key={index}>{item}</option>
+                        return <option key={index} className="text-black text-center">{item}</option>
                     })}
                 </select>
-                {valid && <h4 id="country-text">* Please Select a Valid Country</h4>}
-                <button onClick={hide}>Done</button>
+
+                {valid && <h4 className="mt-3 text-orange-700 font-bold sm:mt-5 md:mt-7">* Please Select a Valid Country</h4>}
+
+                <button className="w-28 rounded-lg text-white py-1 text-xl mt-5 shadow-[1px_1px_10px_0_black] hover:shadow-[1px_1px_10px_0_white] sm:mt-7 md:mt-8" onClick={hide}>Done</button>
+
             </div>
         </div>
     );
