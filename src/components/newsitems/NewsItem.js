@@ -7,7 +7,7 @@ const NewsItem = (props) => {
 
 
     return (
-        <div className="w-11/12 h-fit rounded-xl shadow-[2px_2px_10px_0_black] px-2 pb-6 pt-1 hover:shadow-none">
+        <div className="w-11/12 h-fit rounded-xl shadow-[2px_2px_10px_0_black] px-2 pb-6 pt-1 hover:shadow-none sm:w-72">
 
             <h2 className="text-center text-purple-900 text-ellipsis text-xl font-semibold my-2">{props.source}</h2>
 
@@ -23,7 +23,7 @@ const NewsItem = (props) => {
 
             <h3 className="text-lg font-semibold my-2">{props.title}</h3>
 
-            <img src={props.image} className="11/12 h-40"></img>
+            <img src={props.image} className="11/12 h-40 rounded-md"></img>
 
             <p className="mb-4">{props.description}</p>
 

@@ -40,23 +40,30 @@ function App() {
     setShowSidebar(s);
   }
 
-  useEffect(() => {
-    if (window.innerWidth >=0 &&  window.innerWidth <800) {
-      sidebar(false);
-    }
-    else {
-      sidebar(true);
-    }
-  }, [window.innerWidth]);
+  // useEffect(() => {
+  //   if (window.innerWidth >=0 &&  window.innerWidth <800) {
+  //     sidebar(false);
+  //   }
+  //   else {
+  //     sidebar(true);
+  //   }
+  // }, [window.innerWidth]);
 
   return (
     <div id="app">
+
       {showCountry ? <Country hide={hideCountry} code={setCode} country={selectCountry} /> :
+
         <Router>
+
           <Navigation show={hideCountry} click={showSidebar} func={sidebar} />
+
           <Search search={handleSearch} value={search} selected={selectedCountry} />
+
           {showSidebar && <Sidebar />}
+
           <LoadingBar color='white' progress={progress} />
+
           <Routes>
 
             <Route path="/" element={<News key="general" country={countryCode} category="general" progress={handleProgress} search={search} />}></Route>
@@ -74,8 +81,11 @@ function App() {
             <Route path="/sports" element={<News key="sports" country={countryCode} category="sports" progress={handleProgress} search={search} />}></Route>
 
           </Routes>
+
         </Router>
+        
       }
+
     </div>
   );
 }

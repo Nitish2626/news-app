@@ -54,7 +54,7 @@ const News = (props) => {
     }, [props.search,props.country,totalResult]);
 
     return (
-        <div className="flex items-center justify-center flex-wrap gap-10 pt-12 pb-5">
+        <div className="flex items-center justify-center flex-wrap gap-10 pt-12 pb-5 sm:gap-8">
             {loader ? <Loader /> : articles.map((item, i) => {
                 return <NewsItem key={i} title={item.title} image={item.urlToImage} description={item.description} url={item.url} source={item.source.name} author={item.author} time={item.publishedAt} />
             })}
