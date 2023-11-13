@@ -23,7 +23,7 @@ const NewsItem = (props) => {
 
             <h3 className="text-lg font-semibold my-2">{props.title}</h3>
 
-            <img src={props.image} className="11/12 h-40 rounded-md"></img>
+            <img src={props.image} className="w-11/12 h-40 rounded-md"></img>
 
             <p className="mb-4">{props.description}</p>
 

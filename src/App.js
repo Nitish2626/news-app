@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from "./components/navigation-bar/Navigation";
 import Sidebar from './components/side-bar/Sidebar';
 import LoadingBar from 'react-top-loading-bar';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Search from './components/search bar/Search';
 import Country from './components/select country/Country';
 
@@ -36,10 +36,6 @@ function App() {
     setSelectedCountry(c);
   }
 
-  const sidebar = (s) => {
-    setShowSidebar(s);
-  }
-
   // useEffect(() => {
   //   if (window.innerWidth >=0 &&  window.innerWidth <800) {
   //     sidebar(false);
@@ -56,7 +52,7 @@ function App() {
 
         <Router>
 
-          <Navigation show={hideCountry} click={showSidebar} func={sidebar} />
+          <Navigation show={hideCountry} func={setShowSidebar} />
 
           <Search search={handleSearch} value={search} selected={selectedCountry} />
 
