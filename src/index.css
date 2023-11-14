@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.active{
+  @apply bg-white rounded-md text-blue-500;
+}
+
 body {
   margin: 0;
   padding: 0;

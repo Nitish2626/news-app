@@ -1,54 +1,32 @@
-import { NavLink } from "react-router-dom";
-import "./Sidebar.css";
+import Navlinks from "../navlinks/Navlinks";
+import general from "../../images/news.png";
+import health from "../../images/health.png";
+import science from "../../images/science.png";
+import technology from "../../images/technology.png";
+import business from "../../images/business.png";
+import entertainment from "../../images/entertainment.png";
+import sports from "../../images/sports.png";
 
-const Sidebar = (props) => {
+const Sidebar = () => {
 
     return (
-        <div id="sidebar-div">
+        <div className="w-52 flex flex-col items-center justify-center fixed top-10 right-0 bg-blue-500 rounded-md py-1">
 
-            <NavLink to="/" className="link">
-                <button className="sidebar-btn">
-                    <h1 className="h1">General</h1>
-                </button>
-            </NavLink>
+            <Navlinks to="/" route="General" src={general} />
 
-            <NavLink to="/health" className="link">
-                <button className="sidebar-btn">
-                    <h1 className="h1">Health</h1>
-                </button>
-            </NavLink>
+            <Navlinks to="/health" route="Health" src={health} />
 
-            <NavLink to="/science" className="link">
-                <button className="sidebar-btn">
-                    <h1 className="h1">Science</h1>
-                </button>
-            </NavLink>
+            <Navlinks to="/science" route="Science" src={science} />
 
-            <NavLink to="/technology" className="link">
-                <button className="sidebar-btn">
-                    <h1 className="h1">Technology</h1>
-                </button>
-            </NavLink>
+            <Navlinks to="/technology" route="Technology" src={technology} />
 
-            <NavLink to="/business" className="link">
-                <button className="sidebar-btn">
-                    <h1 className="h1">Business</h1>
-                </button>
-            </NavLink>
+            <Navlinks to="/business" route="Business" src={business} />
 
-            <NavLink to="/entertainment" className="link">
-                <button className="sidebar-btn">
-                    <h1 className="h1">Entertainment</h1>
-                </button>
-            </NavLink>
+            <Navlinks to="/entertainment" route="Entertainment" src={entertainment}  />
 
-            <NavLink to="/sports" className="link">
-                <button className="sidebar-btn">
-                    <h1 className="h1">Sports</h1>
-                </button>
-            </NavLink>
+            <Navlinks to="/sports" route="Sports" src={sports} />
 
-        </div>
+        </div >
     );
 }
 export default Sidebar;
