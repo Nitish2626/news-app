@@ -9,7 +9,7 @@ const Navigation = (props) => {
 
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcW8zoDItzqViYNVJozeC__TYcszlrg3_67g&usqp=CAU" className="w-10 h-8 ml-2 rounded-md"></img>
 
-            <button className="w-9 h-9 bg-transparent flex justify-center items-center border-none outline-none fill-white" onClick={showCountry}>
+            <button className="w-9 h-9 bg-transparent flex justify-center items-center border-none outline-none fill-white md:hidden" onClick={showCountry}>
                 <svg
                     viewBox="0 0 24 24"
                 > 
