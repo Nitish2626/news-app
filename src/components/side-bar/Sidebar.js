@@ -10,7 +10,7 @@ import sports from "../../images/sports.png";
 const Sidebar = () => {
 
     return (
-        <div className="w-52 flex flex-col items-center justify-center fixed top-10 right-0 bg-blue-500 rounded-md py-1 md:flex-row">
+        <div className="w-52 flex flex-col items-center justify-center fixed top-10 right-0 bg-blue-500 rounded-md py-1 md:flex-row md:w-11/12">
 
             <Navlinks to="/" route="General" src={general} />
 
