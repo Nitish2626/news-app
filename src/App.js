@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from "./components/navigation-bar/Navigation";
 import Sidebar from './components/side-bar/Sidebar';
 import LoadingBar from 'react-top-loading-bar';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import Search from './components/search bar/Search';
 import Country from './components/select country/Country';
 
@@ -36,14 +36,11 @@ function App() {
     setSelectedCountry(c);
   }
 
-  // useEffect(() => {
-  //   if (window.innerWidth >=0 &&  window.innerWidth <800) {
-  //     sidebar(false);
-  //   }
-  //   else {
-  //     sidebar(true);
-  //   }
-  // }, [window.innerWidth]);
+  useEffect(() => {
+    if (window.innerWidth >= 768) {
+      setShowSidebar(true);
+    }
+  }, [window.innerWidth]);
 
   return (
     <div id="app">
