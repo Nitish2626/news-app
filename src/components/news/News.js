@@ -20,7 +20,7 @@ const News = (props) => {
             const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${page}&pageSize=10`);
             const data = await res.data.articles;
             setTotalResult(await res.data.totalResults); 
-            console.log("more",totalResult);
+            // console.log("more",totalResult);
             setArticles(articles.concat(await data));
             setLoader(false);
         }
@@ -38,7 +38,7 @@ const News = (props) => {
                 props.progress(50);
                 const data = await res.data.articles;
                 setTotalResult(await res.data.totalResults);
-                console.log(totalResult);
+                // console.log(totalResult);
                 props.progress(70);
                 setArticles(await data);
                 props.progress(100);

@@ -36,12 +36,6 @@ function App() {
     setSelectedCountry(c);
   }
 
-  useEffect(() => {
-    if (window.innerWidth >= 768) {
-      setShowSidebar(true);
-    }
-  }, [window.innerWidth]);
-
   return (
     <div id="app">
 
@@ -53,7 +47,7 @@ function App() {
 
           <Search search={handleSearch} value={search} selected={selectedCountry} />
 
-          {showSidebar && <Sidebar />}
+          <Sidebar show={showSidebar} />
 
           <LoadingBar color='white' progress={progress} />
 

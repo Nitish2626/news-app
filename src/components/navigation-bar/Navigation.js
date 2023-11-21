@@ -17,11 +17,9 @@ const Navigation = (props) => {
                 </svg>
             </button>
 
-            <button className="w-10 h-6 flex flex-col items-center justify-between bg-transparent rounded-full border-none outline-none cursor-pointer md:hidden" onClick={() =>{
-                props.func((prev)=>
-                    !prev
-                );
-            }}
+            <button className="w-10 h-6 flex flex-col items-center justify-between bg-transparent rounded-full border-none outline-none cursor-pointer md:hidden" onClick={() =>
+              props.func((prev)=>!prev)
+            }
             >
                 <span className="w-8 h-1 bg-white rounded-md" id="line1"></span>
                 <span className="w-8 h-1 bg-white rounded-md" id="line2"></span>
