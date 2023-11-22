@@ -9,11 +9,11 @@ const NewsItem = (props) => {
     return (
         <div className="w-11/12 h-fit rounded-xl shadow-[2px_2px_10px_0_black] px-2 pb-6 pt-1 hover:shadow-none sm:w-72">
 
-            <h2 className="text-center text-purple-900 text-ellipsis text-xl font-semibold my-2">{props.source}</h2>
+            <h2 className="text-center text-purple-900 overflow-hidden text-ellipsis text-xl font-semibold my-2">{props.source}</h2>
 
             <div className="flex justify-between text-gray-500">
 
-                <span>
+                <span className="overflow-hidden text-ellipsis">
                     {props.author}
                 </span>
                 <span>

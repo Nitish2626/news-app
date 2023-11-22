@@ -13,32 +13,16 @@ const News = (props) => {
     let title = props.category.slice(1);
     document.title = props.category[0].toUpperCase() + title;
 
-    const moreArticles=async ()=>{
-        try {
-            setPage(page+1);
-            setLoader(true);
-            const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${page}&pageSize=10`);
-            const data = await res.data.articles;
-            setTotalResult(await res.data.totalResults); 
-            // console.log("more",totalResult);
-            setArticles(articles.concat(await data));
-            setLoader(false);
-        }
-        catch (err) {
-            console.log(err);
-        }
-    }
-
     useEffect(() => {
 
         const api = async () => {
             try {
                 props.progress(10);
-                const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${page}&pageSize=10`)
+                const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${page}&pageSize=20`)
                 props.progress(50);
                 const data = await res.data.articles;
                 setTotalResult(await res.data.totalResults);
-                // console.log(totalResult);
+                console.log("total : ",totalResult);
                 props.progress(70);
                 setArticles(await data);
                 props.progress(100);
@@ -51,7 +35,24 @@ const News = (props) => {
             }
         };
         api();
-    }, [props.search,props.country,totalResult]);
+    }, [props.search,props.country,page]);
+
+    const moreArticles=async ()=>{
+        try {
+            // if()
+            setPage(page+1);
+            setLoader(true);
+            const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${page}&pageSize=20`);
+            const data = await res.data.articles;
+            setTotalResult(await res.data.totalResults); 
+            console.log("more",totalResult);
+            setArticles(articles.concat(await data));
+            setLoader(false);
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
 
     return (
         <div className="w-full flex items-center justify-center flex-wrap gap-10 pt-12 pb-5 sm:gap-8">
