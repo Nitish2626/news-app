@@ -35,7 +35,7 @@ const News = (props) => {
             }
         };
         api();
-    }, [props.search,props.country,page]);
+    }, [props.search,props.country]);
 
     const moreArticles=async ()=>{
         try {
@@ -55,7 +55,7 @@ const News = (props) => {
     }
 
     return (
-        <div className="w-full flex items-center justify-center flex-wrap gap-10 pt-12 pb-5 sm:gap-8">
+        <div className="w-full flex items-center justify-center flex-wrap gap-10 pt-12 pb-5">
 
             {loader ? <Loader /> : articles.map((item, i) => {
                 return <NewsItem key={i} title={item.title} image={item.urlToImage} description={item.description} url={item.url} source={item.source.name} author={item.author} time={item.publishedAt} />

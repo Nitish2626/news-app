@@ -5,7 +5,7 @@ const Navigation = (props) => {
     }
 
     return (
-        <nav className="w-full h-10 sticky top-0 bg-blue-500 flex items-center justify-between">
+        <nav className="w-full h-11 sticky top-0 bg-blue-500 flex items-center justify-between">
 
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcW8zoDItzqViYNVJozeC__TYcszlrg3_67g&usqp=CAU" className="w-10 h-8 ml-2 rounded-md"></img>
 
@@ -17,7 +17,7 @@ const Navigation = (props) => {
                 </svg>
             </button>
 
-            <button className="w-10 h-6 flex flex-col items-center justify-between bg-transparent rounded-full border-none outline-none cursor-pointer md:hidden" onClick={() =>
+            <button className="w-10 h-6 flex flex-col items-center justify-between bg-transparent rounded-full border-none outline-none cursor-pointer lg:hidden" onClick={() =>
               props.func((prev)=>!prev)
             }
             >

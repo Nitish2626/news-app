@@ -8,6 +8,11 @@ module.exports = {
     extend: {
       backgroundImage:{
         "earth":"url('/src/images/earth.png')"
+      },
+      screens:{
+        "sm":"376px",
+        "md":"640px",
+        "lg":"1024px"
       }
     },
   },

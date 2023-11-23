@@ -10,7 +10,7 @@ import sports from "../../images/sports.png";
 const Sidebar = (props) => {
 
     return (
-        <div className={`w-52 flex flex-col items-center justify-center fixed top-10 right-0 bg-blue-500 rounded-md py-1 ${props.show===false ? "hidden" : ""} md:flex md:flex-row md:w-11/12 md:px-1 md:top-0 md:gap-2`}>
+        <div className={`w-52 flex flex-col items-center justify-center fixed top-10 right-0 bg-blue-500 rounded-md py-1 ${props.show===false ? "hidden" : ""} lg:flex lg:flex-row lg:w-5/6 lg:h-10 lg:px-1 lg:top-1 lg:left-24 lg:gap-5 lg:bg-transparent`}>
 
             <Navlinks to="/" route="General" src={general} />
 
