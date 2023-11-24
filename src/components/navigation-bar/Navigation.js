@@ -17,7 +17,7 @@ const Navigation = (props) => {
                 </svg>
             </button>
 
-            <button className="w-10 h-6 flex flex-col items-center justify-between bg-transparent rounded-full border-none outline-none cursor-pointer lg:hidden" onClick={() =>
+            <button className="w-10 h-6 flex flex-col items-center justify-between bg-transparent rounded-full border-none outline-none cursor-pointer 3xl:hidden" onClick={() =>
               props.func((prev)=>!prev)
             }
             >

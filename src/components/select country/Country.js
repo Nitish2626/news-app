@@ -47,7 +47,7 @@ const Country = (props) => {
     return (
         <div className="w-full h-screen flex items-center justify-center bg-[url('/src/images/earth.png')] bg-contain bg-no-repeat bg-center min-w-max min-h-screen">
 
-            <div className="w-68 h-52 flex flex-col items-center justify-center rounded-lg px-2 py-4 shadow-[1px_1px_10px_0px_white] sm:w-80 sm:h-56 sm:py-0 md:w-96 md:h-60">
+            <div className="w-10/12 h-64 flex flex-col items-center justify-center rounded-lg px-2 py-4 shadow-[1px_1px_10px_0px_white] sm:w-8/12 sm:h-56 sm:py-0 md:w-8/12 md:h-54 lg:w-6/12 xl:w-5/12 2xl:w-4/12 3xl:w-3/12 4xl:w-3/12">
 
                 <h2 className="text-2xl text-white mb-4">Select Your Country ?</h2>
 
