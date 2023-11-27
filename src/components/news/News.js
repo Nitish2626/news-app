@@ -22,38 +22,50 @@ const News = (props) => {
                 const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${page}&pageSize=20`);
                 props.progress(50);
                 const data = await res.data.articles;
+                console.log(page);
                 setTotalResult(await res.data.totalResults);
+                console.log(totalResult);
                 props.progress(70);
                 setArticles(await data);
                 props.progress(100);
-                // if(articles.length !== totalResult){
-                //     moreArticles();
-                // }
             }
             catch (err) {
                 console.log(err);
             }
         };
         api();
-    }, [props.search, props.country, totalResult]);
+    }, [props.search, props.country,totalResult]);
 
-    // const moreArticles=async ()=>{
-    //     try {
-    //         // if()
-    //         setPage((prev)=> prev+1);
-    //         setLoader(true);
-    //         const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${page}&pageSize=20`);
-    //         const data = await res.data.articles;
-    //         // setTotalResult(await res.data.totalResults); 
-    //         setArticles(articles.concat(await data));
-    //         setTotalResult((prev)=> prev-articles.length);
-    //         console.log("more : ",totalResult);
-    //         setLoader(false);
-    //     }
-    //     catch (err) {
-    //         console.log(err);
-    //     }
-    // }
+    const moreArticles=async ()=>{
+        try {
+            setPage((prev)=> prev+1);
+            setLoader(true);
+            const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=2&pageSize=20`);
+            const data = await res.data.articles; 
+            console.log(page);
+            setArticles(await data);
+            console.log(data.length);
+            setLoader(false);
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
+
+    const lessArticles=async ()=>{
+        try {
+            setPage((prev)=> prev-1);
+            setLoader(true);
+            const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${page}&pageSize=20`);
+            const data = await res.data.articles; 
+            console.log(page);
+            setArticles(await data);
+            setLoader(false);
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
 
     return (
         <>
@@ -65,10 +77,10 @@ const News = (props) => {
 
             </div>
 
-            <section className="flex items-center justify-end">
+            <section className="w-full flex items-center justify-evenly mb-5 mt-5">
 
-                <Buttons text="Prev"></Buttons>
-                <Buttons text="Next"></Buttons>
+                <Buttons text="&larr; Prev" click={moreArticles}></Buttons>
+                <Buttons text="Next &rarr;" click={lessArticles}></Buttons>
                 
             </section>
 
