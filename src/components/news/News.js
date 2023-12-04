@@ -42,13 +42,13 @@ const News = (props) => {
             }
             else {
                 setLoader(true);
-                const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${setPage(page + 1)}$pageSize=${pageSize}`);
+                setPage((prev)=>prev+1);
+                const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${page}&pageSize=${pageSize}`);
                 const data = await res.data.articles;
                 console.log("More page : ", page);
                 setArticles(await data);
                 console.log("Page length : ", data.length);
                 setLoader(false);
-                setPage(page+1);
             }
         }
         catch (err) {
@@ -58,13 +58,18 @@ const News = (props) => {
 
     const lessArticles = async () => {
         try {
-            setLoader(true);
-            const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${setPage(page - 1)}&pageSize=${pageSize}`);
-            const data = await res.data.articles;
-            console.log("Less Page : ", page);
-            setArticles(await data);
-            setLoader(false);
-            setPage(page-1);
+            if (page < 1) {
+
+            }
+            else {
+                setLoader(true);
+                setPage((prev)=>prev-1)
+                const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${page}&pageSize=${pageSize}`);
+                const data = await res.data.articles;
+                console.log("Less Page : ", page);
+                setArticles(await data);
+                setLoader(false);
+            }
         }
         catch (err) {
             console.log(err);
