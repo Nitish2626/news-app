@@ -12,6 +12,9 @@ const News = (props) => {
     const [totalResult, setTotalResult] = useState();
     const [pageSize, setPageSize] = useState(20);
 
+    const [prev,setPrev]=useState(false);   
+    const [next,setNext]=useState(false);
+
     let title = props.category.slice(1);
     document.title = props.category[0].toUpperCase() + title;
 
@@ -20,6 +23,11 @@ const News = (props) => {
         const api = async () => {
             try {
                 setLoader(true);
+
+                {prev && setPage((prev) => (prev !== 1 ? prev - 1 : prev))};
+
+                {next && setPage((prev) => (prev !== Math.ceil(totalResult / pageSize) ? prev + 1 : prev))};
+
                 const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${page}&pageSize=${pageSize}`);
                 const data = await res.data.articles;
                 console.log("Page : ", page);
@@ -33,48 +41,50 @@ const News = (props) => {
             }
         };
         api();
-    }, [props.search, props.country, totalResult]);
+    }, [props.search, props.country, totalResult, page, prev, next]);
 
-    const moreArticles = async () => {
-        try {
-            if (page > Math.ceil(totalResult / pageSize)) {
-
-            }
-            else {
-                setLoader(true);
-                setPage((prev)=>prev+1);
-                const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${page}&pageSize=${pageSize}`);
-                const data = await res.data.articles;
-                console.log("More page : ", page);
-                setArticles(await data);
-                console.log("Page length : ", data.length);
-                setLoader(false);
-            }
-        }
-        catch (err) {
-            console.log(err);
-        }
+    const prevClick=(p)=>{
+        setPrev(p);
+    }
+    const nextClick=(n)=>{
+        setNext(n);
     }
 
-    const lessArticles = async () => {
-        try {
-            if (page < 1) {
+    // const moreArticles = async () => {
+    //     try {
+    //         setLoader(true);
 
-            }
-            else {
-                setLoader(true);
-                setPage((prev)=>prev-1)
-                const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${page}&pageSize=${pageSize}`);
-                const data = await res.data.articles;
-                console.log("Less Page : ", page);
-                setArticles(await data);
-                setLoader(false);
-            }
-        }
-        catch (err) {
-            console.log(err);
-        }
-    }
+    //         setPage((prev) => (prev !== Math.ceil(totalResult / pageSize) ? prev + 1 : prev));
+
+    //         const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${page}&pageSize=${pageSize}`);
+    //         const data = await res.data.articles;
+    //         console.log("More page : ", page);
+    //         setArticles(await data);
+    //         console.log("Page length : ", data.length);
+    //         setLoader(false);
+    //     }
+    //     catch (err) {
+    //         console.log(err);
+    //     }
+    // }
+
+
+    // const lessArticles = async () => {
+    //     try {
+    //         setLoader(true);
+
+    //         setPage((prev) => (prev !== 1 ? prev - 1 : prev));
+
+    //         const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${page}&pageSize=${pageSize}`);
+    //         const data = await res.data.articles;
+    //         console.log("Less Page : ", page);
+    //         setArticles(await data);
+    //         setLoader(false);
+    //     }
+    //     catch (err) {
+    //         console.log(err);
+    //     }
+    // }
 
     return (
         <>
@@ -88,8 +98,8 @@ const News = (props) => {
 
             <section className="w-full flex items-center justify-evenly mb-5 mt-5">
 
-                <Buttons text="&larr; Prev" click={lessArticles}></Buttons>
-                <Buttons text="Next &rarr;" click={moreArticles}></Buttons>
+                <Buttons text="&larr; Prev" click={prevClick} disabled={page === 1}></Buttons>
+                <Buttons text="Next &rarr;" click={nextClick} disabled={page === Math.ceil(totalResult / pageSize)}></Buttons>
 
             </section>
 
