@@ -24,9 +24,9 @@ const News = (props) => {
             try {
                 setLoader(true);
 
-                {prev && setPage((prev) => (prev !== 1 ? prev - 1 : prev))};
+                {prev && setPage((prev) => (prev === 1 ? prev : prev - 1 ))};
 
-                {next && setPage((prev) => (prev !== Math.ceil(totalResult / pageSize) ? prev + 1 : prev))};
+                {next && setPage((prev) => (prev === Math.ceil(totalResult / pageSize) ? prev : prev + 1))};
 
                 const res = await axios.get(`https://newsapi.org/v2/top-headlines?q=${props.search}&country=${props.country}&category=${props.category}&apiKey=b7e5090adc214eb5be61fabad71ff288&page=${page}&pageSize=${pageSize}`);
                 const data = await res.data.articles;
@@ -41,7 +41,7 @@ const News = (props) => {
             }
         };
         api();
-    }, [props.search, props.country, totalResult, page, prev, next]);
+    }, [props.search, props.country,totalResult, page, prev, next]);
 
     const prevClick=(p)=>{
         setPrev(p);
