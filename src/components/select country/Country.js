@@ -57,7 +57,7 @@ const Country = (props) => {
                     })}
                 </select>
 
-                {valid && <h4 className="mt-3 text-red-700 font-bold sm:mt-5 md:mt-7">* Please Select a Valid Country</h4>}
+                {valid && <h4 className="mt-3 text-red-600 font-bold sm:mt-5 md:mt-7">* Please Select a Valid Country</h4>}
 
                 <button className="w-28 rounded-lg text-white py-1 text-xl mt-5 shadow-[1px_1px_10px_0_black] hover:shadow-[1px_1px_10px_0_white] sm:mt-7 md:mt-8" onClick={hide}>Done</button>
 

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const NewsItem = (props) => {
 
     let time = new Date(props.time);
-    let t = time.toLocaleString();
+    let t = time.toDateString();
 
 
     return (

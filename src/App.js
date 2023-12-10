@@ -2,13 +2,12 @@ import News from './components/news/News';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from "./components/navigation-bar/Navigation";
 import Sidebar from './components/side-bar/Sidebar';
-import { useState,useEffect } from 'react';
+import { useState} from 'react';
 import Search from './components/search bar/Search';
 import Country from './components/select country/Country';
 
 function App() {
 
-  // const [progress, setProgress] = useState();
   const [search, setSearch] = useState("");
   const [showCountry, setShowCountry] = useState(true);
   const [countryCode, setCountryCode] = useState("");
