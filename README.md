@@ -26,6 +26,7 @@
 <img src="./src/images/search.png"></img>
 
 4. WebApp is also responsive for all devices.
+<br>
 *Mobile Devices :*
 <br>
 <img src="./src/images/mobile.png" width="100" height="200"></img>
